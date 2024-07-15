@@ -29,6 +29,7 @@ function generateStoryMarkup(story, showBtn = false){
   return $(`
       <li id="${story.storyId}">
         <div>
+          
           ${showFav ? createFavStar(story,currentUser): ''}
           <a href="${story.url}" target="a_blank" class="story-link">
             ${story.title}
@@ -171,5 +172,6 @@ async function toggleFavStory(e){
 }
 
 $allStoriesList.on('click','.star',toggleFavStory);
+$allStoriesList.on('click','.trash-can',removeStory);
 
 

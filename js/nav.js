@@ -52,12 +52,14 @@ function navStorySubmissionClick(e){
 $navStorySubmit.on('click',navStorySubmissionClick);
 
 /* handling what happens once My Stories is clicked */
-function navUserStoriesClick(){
+function navUserStoriesClick(e){
+  e.preventDefault();
   hidePageComponents();
   /* put user stories on page */
   showUserStories();
   userStories.show();
   $userProfile.hide();
+  favStories.hide();
 }
 $navUserStories.on('click',navUserStoriesClick);
 

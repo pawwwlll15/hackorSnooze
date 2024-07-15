@@ -96,7 +96,7 @@ class StoryList {
     await axios({
       url:`${BASE_URL}/stories/${storyId}`,
       method: "DELETE",
-      data: {token: token}
+      data: {token}
     });
 
     /* filter out the story in story list, favorite list, and user list with the ID we would like to remove */
@@ -251,7 +251,7 @@ class User {
   
   
   isFavorite(story){
-    return this.favorites.some(favStory => (favStory.storyId === story.Id));
+    return this.favorites.some(favStory => (favStory.storyId === story.storyId));
   }
 }
 
