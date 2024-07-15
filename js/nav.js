@@ -39,9 +39,14 @@ function navProfileClick(){
 $navUserProfile.on('click',navProfileClick);
 /** When a user first logins in, update the navbar to reflect that. */
 function updateNavOnLogin() {
-  
+  /* NEED HELP HERE!! */
+  if(currentUser){
+    showUserLinks();
+  }else{
+    hideUserLinks();
+  }
   console.debug("updateNavOnLogin");
-  showUserLinks();
+ 
   $navLogin.hide();
   $navLogOut.show();
   $navUserProfile.text(`${currentUser.username}`).show();
