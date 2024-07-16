@@ -24,9 +24,6 @@ function navLoginClick(evt) {
   $loginForm.show();
   $signupForm.show();
   $storyContainer.hide();
- 
-  
-
 }
 $navLogin.on("click", navLoginClick);
 
